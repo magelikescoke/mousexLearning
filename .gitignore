@@ -1,0 +1,8 @@
+/node_modules
+*.jsx.map
+*.jsx
+.idea/
+.vscode/
+dist/
+analyze.json
+debug.log

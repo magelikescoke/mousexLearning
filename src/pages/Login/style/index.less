@@ -1,0 +1,43 @@
+.app-logon {
+  height: 100%;
+  background: url(./images/allbg.png) center /cover no-repeat;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 20%;
+  }
+
+  > .app-logon-title {
+    background: url(./images/logintitle.png) center center /contain no-repeat;
+    height: 32px;
+  }
+
+  > .app-logon-beltWrapper {
+    margin-top: 50px;
+    background: url(./images/bgcenterbg.png) repeat-x center center;
+  }
+
+  > .app-logon-beltWrapper {
+    margin-top: 50px;
+    background: url(./images/bgcenterbg.png) repeat-x center center;
+
+    .app-logon-formWrapper {
+      position: relative;
+      background: url(./images/welcome.png) no-repeat center center /contain;
+      height: 340px;
+
+      .app-logon-formWrapper-form {
+        position: relative;
+        top: 90px;
+        width: 280px;
+        margin: 0 auto;
+
+        .login-form-forgot {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
