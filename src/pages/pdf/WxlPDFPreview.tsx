@@ -136,6 +136,7 @@ export default function PDFPreview(){
             </Row>
         </Form>
         <BasicTable
+            style={{marginTop:'10px'}}
             dataSource={data}
             columns={columns}
             showNumber={{isShow:true,title:'No.',width:150,align:'center'}}
