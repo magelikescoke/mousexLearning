@@ -92,6 +92,11 @@ module.exports = SEFResponseWrapper({
                             path: 'personInfoQueryMain',
                             name: 'personInfoQueryMain',
                             component: 'personInfoQueryMain'
+                        },
+                        {
+                            path: 'wxlPDFPreview',
+                            name: 'wxlPDFPreview',
+                            component: 'wxlPDFPreview'
                         }
                     ]
                 }
@@ -521,5 +526,30 @@ module.exports = SEFResponseWrapper({
             }),
             total:data.length
         }
+    },
+    '/mock/wangxinlong/workerInfo': (req, res) => {
+        const {cardNum, name, status} = req.body
+        const datas = []
+        for(let i = 0;i<21;i++){
+            datas[i] = {
+                key: i,
+                unitName:`工伤一科${Math.ceil(i/10)}`,
+                cardNum: `11111111111111${10+i}`,
+                name:`测试人员${i}`,
+                workTime: `202207${10+i}`,
+                birth: `200007${10+i}`,
+                gender:`${(i%2)+1}`,
+                nationality: `${(i%3)+1}`,
+                workType: `${(i%3)+1}`,
+                level:`${(i%4)+1}`,
+                status:`${(i%2)+1}`,
+            }
+        }
+        return datas.filter((e)=>{
+            if(cardNum && cardNum != e.cardNum) return false
+            if(name && name != e.name) return false
+            if(status && status != e.status) return false
+            return true
+        })
     }
 });

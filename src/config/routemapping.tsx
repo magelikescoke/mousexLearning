@@ -15,6 +15,7 @@ export default {
     'treeTest': dynamic(() => import('../pages/TreeTest')),
     'modalExercise': dynamic(() => import('../pages/modalExercise/ModalExercise')),
     'generalExercise1': dynamic(() => import('../pages/general/GeneralExercise1')),
-    'personInfoQueryMain': dynamic(() => import('../pages/exercise2/PersonInfoQueryMain'))
+    'personInfoQueryMain': dynamic(() => import('../pages/exercise2/PersonInfoQueryMain')),
+    'wxlPDFPreview': dynamic(() => import('../pages/pdf/WxlPDFPreview')),
     
 };
